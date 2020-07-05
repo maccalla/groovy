@@ -1,4 +1,4 @@
-
+@Grab("thymeleaf-spring5")
 
 @Controller
 class App {
@@ -7,6 +7,7 @@ class App {
     @ResponseBody
     def home(ModelAndView mav) {
         mav.setViewName("home")
+        mav.addObject("msg", "this is msg.")
         mav
     }
 }
